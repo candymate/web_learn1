@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "candymate",
+    "password": "password",
+    "database": "web_learn1",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "candymate",
+    "password": "password",
+    "database": "web_learn1",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "candymate",
+    "password": "password",
+    "database": "web_learn1",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
