@@ -12,5 +12,8 @@ router.get("/", (req, res) => {
 // /register route
 require("./register")(router);
 
+// /login route
+require("./login")(router);
+
 module.exports = router;
 
