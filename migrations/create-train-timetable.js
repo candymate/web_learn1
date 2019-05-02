@@ -1,29 +1,36 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Users', {
+    return queryInterface.createTable('TrainTimetables', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      userID: {
+      trainType: {
         allowNull: false,
-        unique: true,
-        type: Sequelize.STRING(32)
+        type: Sequelize.STRING(8)
       },
-      password_hash: {
+      trainNo: {
         allowNull: false,
-        type: Sequelize.STRING(64)
-      },
-      trainID: {
-        allowNull: true,
         type: Sequelize.INTEGER
       },
-      roomID: {
-        allowNull: true,
-        type: Sequelize.INTEGER
+      dep: {
+        allowNull: false,
+        type: Sequelize.STRING(8)
+      },
+      depTime: {
+        allowNull: false,
+        type: Sequelize.DATE
+      },
+      arr: {
+        allowNull: false,
+        type: Sequelize.STRING(8)
+      },
+      arrTime: {
+        allowNull: false,
+        type: Sequelize.DATE
       },
       createdAt: {
         allowNull: false,
@@ -36,6 +43,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Users');
+    return queryInterface.dropTable('TrainTimetables');
   }
 };

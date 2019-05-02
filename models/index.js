@@ -35,5 +35,7 @@ db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
 db.User = require("./user")(sequelize, Sequelize);
+db.TrainTimetable = require("./traintimetable")(sequelize, Sequelize);
+db.CarpoolRoom = require("./carpoolroom")(sequelize, Sequelize);
 
 module.exports = db;
